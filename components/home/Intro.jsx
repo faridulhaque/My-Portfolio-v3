@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import intro from "../../../assets/images/intro.png";
+import intro from "../../assets/images/intro.png";
 import Typewriter from "typewriter-effect";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
 import { SiQuora } from "react-icons/si";

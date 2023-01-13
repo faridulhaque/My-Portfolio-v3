@@ -31,23 +31,37 @@ const Intro = () => {
               good knowledge of HTML, CSS, JavaScript and React JS.
             </p>
             <p className="w-3/4 h-[75px] mt-10 flex items-center justify-between">
-              <Link className="bg-primary p-3  rounded-full group relative" href="https://github.com/faridulhaque" target="_blank">
+              <Link
+                className="bg-[#24292F] p-3  rounded-full shadow-xl"
+                href="https://github.com/faridulhaque"
+                target="_blank"
+              >
                 <BsGithub className="text-[25px] text-white"></BsGithub>
-                
               </Link>
 
-              <Link className="bg-primary p-3  rounded-full" href="https://www.linkedin.com/in/faridulhaquemurshed/" target="_blank">
+              <Link
+                className="bg-[#0A66C2] p-3  rounded-full shadow-xl"
+                href="https://www.linkedin.com/in/faridulhaquemurshed/"
+                target="_blank"
+              >
                 <BsLinkedin className="text-[25px] text-white"></BsLinkedin>
               </Link>
 
-              <Link className="bg-primary p-3  rounded-full" href="https://www.quora.com/profile/Faridul-Haque-Murshed" target="_blank">
+              <Link
+                className="bg-[#B92B27] p-3  rounded-full shadow-xl"
+                href="https://www.quora.com/profile/Faridul-Haque-Murshed"
+                target="_blank"
+              >
                 <SiQuora className="text-[25px] text-white"></SiQuora>
               </Link>
 
-              <Link className="bg-primary p-3  rounded-full" href="https://www.facebook.com/faridhaque911/" target="_blank">
+              <Link
+                className="bg-[#1877F2] p-3  rounded-full shadow-xl"
+                href="https://www.facebook.com/faridhaque911/"
+                target="_blank"
+              >
                 <FaFacebook className="text-[25px] text-white"></FaFacebook>
               </Link>
-             
             </p>
           </div>
         </div>
@@ -55,10 +69,11 @@ const Intro = () => {
         <div className="w-full ">
           <div className="h-[60vh] flex items-center justify-center w-full relative">
             <Image
+              className="shadow-xl rounded-lg"
               src={intro}
               alt="man_vector"
-              width={"100%"}
-              height={"100%"}
+              // width={500}
+              // height={500}
             />
           </div>
         </div>

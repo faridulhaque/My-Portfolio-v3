@@ -7,7 +7,6 @@ import logo from "../../assets/images/t_logo.png";
 const Navbar = () => {
   const router = useRouter();
 
-  console.log(router.pathname)
 
   return (
     <nav className="w-full h-20 flex m-auto">

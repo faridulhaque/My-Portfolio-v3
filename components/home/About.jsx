@@ -12,7 +12,7 @@ const About = () => {
             <Image
               src={aboutMe}
               alt="man-computer"
-              className="w-full h-full"
+              className="w-full h-full shadow-xl rounded-lg"
             ></Image>
           </div>
 

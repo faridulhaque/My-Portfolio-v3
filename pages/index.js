@@ -5,7 +5,7 @@ import HomeIndex from '../components/home/HomeIndex';
 
 const index = () => {
     return (
-        <div className="app">
+        <div>
             <HomeIndex></HomeIndex>
         </div>
     );

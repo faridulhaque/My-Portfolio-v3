@@ -20,7 +20,9 @@ const Projects = () => {
   }
 
   if (!data) {
-    return <h2>loading</h2>;
+    return (
+      <h2 className="text-center text-4xl text-basic">Loading...</h2>
+    );
   }
 
   return (

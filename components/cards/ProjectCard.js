@@ -1,12 +1,10 @@
 import Image from 'next/image';
-import React, { useContext } from 'react';
-import { BsGithub } from 'react-icons/bs';
-import { BiGlobe } from 'react-icons/bi';
-import { AiOutlineInfoCircle } from 'react-icons/ai';
+import React, { useContext, useEffect, useState } from 'react';
+
+import { FiMoreVertical } from 'react-icons/fi';
 import TooltipContainer from '../ToolTip/TooltipContainer';
 import Link from 'next/link';
 import { GlobalContext } from '../../pages/_app';
-import GitModal from '../modals/GitModal';
 import FeatureModal from '../modals/FeatureModal';
 
 const ProjectCard = ({ project }) => {
@@ -14,13 +12,21 @@ const ProjectCard = ({ project }) => {
     const { featureModalOpen,
         featureModalRef,
         setFeatureModalOpen,
-        gitModalOpen,
-        setGitModalOpen,
-        gitModalRef } = modalData;
-    
-        
+    } = modalData;
+
+    const [modalInfo, setModalInfo] = useState(null)
+
+    const handleModal = () => {
+        setModalInfo(project)
+        setFeatureModalOpen(true)
+    }
 
 
+    useEffect(()=>{
+        if(!featureModalOpen){
+            setModalInfo(null)
+        }
+    }, [featureModalOpen])
 
 
     return (
@@ -28,28 +34,21 @@ const ProjectCard = ({ project }) => {
         <>
             <div className="w-full h-[500px] bg-[#ECECEC] shadow-xl transition-all duration-700 hover:shadow-2xl rounded-xxl hover:scale-105">
                 <div className="w-full h-3/4 relative">
-                    <Image className='w-10/12 h-full' src={project?.image} alt="screen-shot" width={550} height={500}></Image>
-                    <div className="w-2/12 absolute right-0 top-0 h-full bg-[#ECECEC] flex flex-col items-center justify-around">
-                        <TooltipContainer modalOpen={setGitModalOpen} dataTip="Git" icon={<BsGithub className='text-white text-[2vh]'></BsGithub>} cn="bg-git"></TooltipContainer>
+                    <Image className='w-full h-full' src={project?.image} alt="screen-shot" width={550} height={500}></Image>
 
-                        <Link href={project?.live} target="_blank">
-                            <TooltipContainer dataTip="Live Site" cn="bg-web" icon={<BiGlobe className='text-white text-[2vh]'></BiGlobe>}></TooltipContainer>
-                        </Link>
-
-                        <TooltipContainer modalOpen={setFeatureModalOpen} dataTip="Features" cn="bg-features" icon={<AiOutlineInfoCircle className='text-white text-[2vh]'></AiOutlineInfoCircle>}></TooltipContainer>
-                    </div>
                 </div>
 
-                <div className="w-full h-1/4">
+                <div className="w-full h-1/4 relative">
                     <h1 className="text-basic text-3xl mt-5 ml-4">{project?.name}</h1>
+                    <span onClick={handleModal} className="absolute top-[10%] right-5 cursor-pointer">
+                        <TooltipContainer dataTip="See More" icon={<FiMoreVertical className='text-basic text-[2vh]'></FiMoreVertical>} cn="bg-white"></TooltipContainer>
+                    </span>
                 </div>
             </div>
 
+
             {
-                gitModalOpen && <GitModal modalRef={gitModalRef} setGitModalOpen={setGitModalOpen}></GitModal>
-            }
-            {
-                featureModalOpen && <FeatureModal modalRef={featureModalRef} setFeatureModalOpen={setFeatureModalOpen}></FeatureModal>
+                (featureModalOpen && modalInfo) && <FeatureModal project={modalInfo} modalRef={featureModalRef} setFeatureModalOpen={setFeatureModalOpen}></FeatureModal>
             }
 
         </>

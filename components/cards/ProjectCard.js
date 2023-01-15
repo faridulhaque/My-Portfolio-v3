@@ -25,6 +25,11 @@ const ProjectCard = ({ project }) => {
     useEffect(()=>{
         if(!featureModalOpen){
             setModalInfo(null)
+            document.body.style.overflowY= "scroll"
+
+        }
+        else{
+            document.body.style.overflowY= "hidden"
         }
     }, [featureModalOpen])
 

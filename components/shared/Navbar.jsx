@@ -40,20 +40,20 @@ const Navbar = () => {
                 "text-basic hover:text-primary"
               
             >
-              <Link href="#blog">Blog</Link>
+              <Link href="/home#blog">Blog</Link>
             </li>
 
             <li
              className=
              "text-basic hover:text-primary"
             >
-              <Link href="#projects">Projects</Link>
+              <Link href="/home#projects">Projects</Link>
             </li>
 
             <li
               className="text-basic hover:text-primary"
             >
-              <Link scroll={false} href="#about" smooth>
+              <Link href="/home#about" smooth>
                 About Me
               </Link>
             </li>

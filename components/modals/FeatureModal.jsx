@@ -16,14 +16,14 @@ const {client, server} = git
         <div className="w-full h-full relative">
           <div
             ref={modalRef}
-            className="w-4/12 h-[235px] bg-white absolute top-0 bottom-0 left-0 right-0 m-auto modal-motion"
+            className="w-4/12 h-[250px] bg-white absolute top-0 bottom-0 left-0 right-0 m-auto modal-motion"
           >
             <div className="w-full h-[125px] ">
               <h2 className="text-basic mt-5 ml-5 text-4xl">{name}</h2>
-              <p className="mt-5 ml-5 text-[18px] text-basic">{description}</p>
+              <p className="mt-5 mx-5 text-[18px] text-basic">{description}</p>
             </div>
 
-            <div className="w-full h-[80px]  flex items-center justify-around">
+            <div className="w-full h-[100px]  flex items-center justify-around">
               <Link href={live} target="_blank">
                 <TooltipContainer
                   dataTip="Live Site"

@@ -2,7 +2,11 @@ import React from "react";
 import ProjectCard from "../cards/ProjectCard";
 import useSwr from "swr";
 
+
 const Projects = () => {
+
+
+  
   const fetcher = async () => {
     const res = await fetch(
       "https://raw.githubusercontent.com/faridulhaque/My-json-data/main/my_protfolio3.json"
@@ -20,9 +24,7 @@ const Projects = () => {
   }
 
   if (!data) {
-    return (
-      <h2 className="text-center text-4xl text-basic">Loading...</h2>
-    );
+    return <h2 className="text-center text-4xl text-basic">Loading...</h2>;
   }
 
   return (

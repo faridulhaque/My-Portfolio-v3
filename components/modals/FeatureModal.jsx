@@ -49,7 +49,7 @@ const {client, server} = git
                 ></TooltipContainer>
               </Link>
 
-              <Link href={`/${id}`}>
+              <Link href={`/${id}/#carousel`}>
                 <TooltipContainer
                   dataTip="Features"
                   cn="bg-features"

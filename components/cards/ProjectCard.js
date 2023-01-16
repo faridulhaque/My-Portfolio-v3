@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import React, { useContext, useEffect, useMemo, useState } from 'react';
 
-import { FiMoreVertical } from 'react-icons/fi';
+import { MdUnfoldMore } from 'react-icons/md';
 import TooltipContainer from '../ToolTip/TooltipContainer';
 import Link from 'next/link';
 import { GlobalContext } from '../../pages/_app';
@@ -52,7 +52,7 @@ const ProjectCard = ({ project }) => {
                 <div className="w-full h-1/4 relative">
                     <h1 className="text-basic text-3xl mt-5 ml-4">{project?.name}</h1>
                     <span onClick={handleModal} className="absolute top-[10%] right-5 cursor-pointer">
-                        <TooltipContainer dataTip="See More" icon={<FiMoreVertical className='text-basic text-[2vh]'></FiMoreVertical>} cn="bg-white"></TooltipContainer>
+                        <TooltipContainer dataTip="See More" icon={<MdUnfoldMore className='text-basic text-[24px]'></MdUnfoldMore>} cn="bg-white"></TooltipContainer>
                     </span>
                 </div>
             </div>

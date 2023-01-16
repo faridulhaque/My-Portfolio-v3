@@ -4,7 +4,7 @@ import { BsChevronDoubleLeft, BsChevronDoubleRight,  } from "react-icons/bs"
 
 const ProjectCarousel = ({ feature, project, handleBlockCarousel }) => {
     return (
-        <div className='w-3/4 shadow-2xl m-auto bg-white text-basic h-auto mt-10 pt-10 pb-20'>
+        <div id="carousel" className='w-3/4 shadow-2xl m-auto bg-white text-basic h-auto mt-10 pt-10 pb-20'>
             <div className='w-11/12 m-auto'>
                 <h2 className='text-3xl text-basic'>{project?.name}</h2>
                 <p className='text-basic text-[18px]'>{project?.description}</p>

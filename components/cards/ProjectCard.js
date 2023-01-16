@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import React, { useContext, useEffect, useState } from 'react';
+import React, { useContext, useEffect, useMemo, useState } from 'react';
 
 import { FiMoreVertical } from 'react-icons/fi';
 import TooltipContainer from '../ToolTip/TooltipContainer';
@@ -8,6 +8,9 @@ import { GlobalContext } from '../../pages/_app';
 import FeatureModal from '../modals/FeatureModal';
 
 const ProjectCard = ({ project }) => {
+
+
+
     const { modalData } = useContext(GlobalContext)
     const { featureModalOpen,
         featureModalRef,
@@ -22,16 +25,19 @@ const ProjectCard = ({ project }) => {
     }
 
 
-    useEffect(()=>{
-        if(!featureModalOpen){
+    useEffect(() => {
+        if (!featureModalOpen) {
             setModalInfo(null)
-            document.body.style.overflowY= "scroll"
+            document.body.style.overflowY = "scroll"
 
         }
-        else{
-            document.body.style.overflowY= "hidden"
+        else {
+            document.body.style.overflowY = "hidden"
         }
     }, [featureModalOpen])
+
+
+
 
 
     return (

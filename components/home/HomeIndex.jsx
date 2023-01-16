@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect } from "react";
 import { GlobalContext } from "../../pages/_app";
 import Navbar from "../shared/Navbar";
 import ScrollToTop from "../shared/ScrollToTop";
@@ -7,10 +7,11 @@ import Intro from "./Intro";
 import Projects from "./Projects";
 
 const HomeIndex = () => {
+  const { modalData } = useContext(GlobalContext);
 
-  const {modalData} = useContext(GlobalContext)
+  const { featureModalOpen } = modalData;
 
-  const {featureModalOpen} = modalData
+ 
 
   return (
     <div className="app">

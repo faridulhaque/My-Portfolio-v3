@@ -3,6 +3,7 @@ import { GlobalContext } from "../../pages/_app";
 import Navbar from "../shared/Navbar";
 import ScrollToTop from "../shared/ScrollToTop";
 import About from "./About";
+import Contact from "./Contact";
 import Intro from "./Intro";
 import Projects from "./Projects";
 
@@ -19,6 +20,7 @@ const HomeIndex = () => {
       <Intro></Intro>
       <About></About>
       <Projects></Projects>
+      <Contact></Contact>
       <ScrollToTop></ScrollToTop>
     </div>
   );

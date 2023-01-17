@@ -35,13 +35,15 @@ const Navbar = () => {
               <Link href="/">Home</Link>
             </li>
 
+
             <li
-              className=
-                "text-basic hover:text-primary"
-              
+              className="text-basic hover:text-primary"
             >
-              <Link href="/home#blog">Blog</Link>
+              <Link href="/home#about">
+                About Me
+              </Link>
             </li>
+
 
             <li
              className=
@@ -50,13 +52,17 @@ const Navbar = () => {
               <Link href="/home#projects">Projects</Link>
             </li>
 
+
             <li
-              className="text-basic hover:text-primary"
+              className=
+                "text-basic hover:text-primary"
+              
             >
-              <Link href="/home#about" smooth>
-                About Me
-              </Link>
+              <Link href="/home#contact">Contact</Link>
             </li>
+
+            
+            
           </ul>
         </div>
 

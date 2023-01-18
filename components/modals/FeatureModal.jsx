@@ -6,21 +6,22 @@ import { AiOutlineInfoCircle } from "react-icons/ai";
 import Link from "next/link";
 
 const FeatureModal = ({ modalRef, setFeatureModalOpen, project}) => {
-const {name, live, description, git, id} = project
+const {name, live, description, git, id, credentials} = project
 const {client, server} = git
 
-
+const height = id == 1 ||  id == 2 ? 'h-[350px]' : id == 4 ? 'h-[300px]' : 'h-[275px]'
   return (
     <>
       <div className="fixed w-[100%] h-[100vh] bottom-0 left-0 bg-basic z-[10] bg-opacity-[0.3]">
         <div className="w-full h-full relative">
           <div
             ref={modalRef}
-            className="w-4/12 h-[250px] bg-white absolute top-0 bottom-0 left-0 right-0 m-auto modal-motion"
+            className={`w-2/4 ${height} bg-white absolute top-0 bottom-0 left-0 right-0 m-auto modal-motion`}
           >
-            <div className="w-full h-[125px] ">
+            <div className="w-full h-auto ">
               <h2 className="text-basic mt-5 ml-5 text-4xl">{name}</h2>
               <p className="mt-5 mx-5 text-[18px] text-basic">{description}</p>
+              <p className="mb-5 mx-5 text-[18px] text-red">{credentials}</p>
             </div>
 
             <div className="w-full h-[100px]  flex items-center justify-around">

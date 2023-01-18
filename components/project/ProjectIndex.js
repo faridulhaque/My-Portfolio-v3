@@ -1,14 +1,12 @@
-import Image from 'next/image';
-import Link from 'next/link';
+
 import { useRouter } from 'next/router';
 import React, { useContext, useEffect, useState } from 'react';
 import { GlobalContext } from '../../pages/_app';
 import Navbar from '../shared/Navbar';
-import TooltipContainer from '../ToolTip/TooltipContainer';
 import ProjectCarousel from './ProjectCarousel';
-import { BsGithub } from "react-icons/bs";
-import { BiGlobe } from "react-icons/bi";
-import { AiOutlineInfoCircle } from "react-icons/ai";
+
+import Footer from '../shared/Footer';
+import ProjectLinks from './ProjectLinks';
 
 const ProjectIndex = () => {
 
@@ -33,7 +31,7 @@ const ProjectIndex = () => {
 
     useEffect(() => {
         setLoading(true)
-        fetch('https://raw.githubusercontent.com/faridulhaque/My-json-data/main/my_protfolio3.json')
+        fetch('https://raw.githubusercontent.com/faridulhaque/faridulhaque/main/portfolioV3.json')
             .then(res => res.json())
             .then(data => {
                 setData(data)
@@ -135,35 +133,11 @@ const ProjectIndex = () => {
 
 
                 {
-                    project?.id && <div className="absolute px-5 bg-white w-[60px] h-[400px] shadow-xl z-[10] right-20 top-10 flex flex-col items-center justify-around">
-                        <Link href={project?.live} target="_blank">
-                            <TooltipContainer
-                                dataTip="Live Site"
-                                cn="bg-web"
-                                icon={<BiGlobe className="text-white text-[2vh]"></BiGlobe>}
-                            ></TooltipContainer>
-                        </Link>
-
-                        <Link href={project?.git?.client} target="_blank">
-                            {" "}
-                            <TooltipContainer
-                                dataTip="Client Side"
-                                icon={<BsGithub className="text-white text-[2vh]"></BsGithub>}
-                                cn="bg-git"
-                            ></TooltipContainer>
-                        </Link>
-                        <Link href={project?.git?.server} target="_blank">
-                            {" "}
-                            <TooltipContainer
-                                dataTip="Server Side"
-                                icon={<BsGithub className="text-white text-[2vh]"></BsGithub>}
-                                cn="bg-git"
-                            ></TooltipContainer>
-                        </Link>
-                    </div>
+                    project?.id && <ProjectLinks project={project}></ProjectLinks>
                 }
             </div>
 
+            <Footer></Footer>
 
         </div>
     );

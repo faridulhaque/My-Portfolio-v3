@@ -4,7 +4,7 @@ import useSwr from "swr";
 const useProjectsInfo = () => {
   const fetcher = async () => {
     const res = await fetch(
-      "https://raw.githubusercontent.com/faridulhaque/My-json-data/main/my_protfolio3.json"
+      "https://raw.githubusercontent.com/faridulhaque/faridulhaque/main/portfolioV3.json"
     );
     const data = await res.json();
     return data;

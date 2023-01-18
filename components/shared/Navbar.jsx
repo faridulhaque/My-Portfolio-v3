@@ -9,7 +9,7 @@ const Navbar = () => {
 
 
   return (
-    <nav className="w-full h-20 flex m-auto">
+    <nav className="w-full h-20 flex m-auto shadow-xl bg-[#97dece80] lg:block md:block xl:block sm:hidden">
       <div className="h-full w-10/12 flex align-center m-auto cursor-pointer">
         <div
           onClick={() => router.push("/")}

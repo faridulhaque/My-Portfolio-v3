@@ -15,7 +15,7 @@ const ContactForm = () => {
       ) : (
         <form
           onSubmit={handleSubmit}
-          className="h-full w-7/12 flex flex-col items-center"
+          className="h-full w-7/12 flex flex-col items-center mt-10"
         >
           <div className="w-11/12 h-[80px] mt-5 grid grid-cols-2 gap-5">
             <div className="w-full flex flex-col items-start">

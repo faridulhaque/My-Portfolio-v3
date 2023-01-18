@@ -1,5 +1,7 @@
 import React, { useContext, useEffect } from "react";
 import { GlobalContext } from "../../pages/_app";
+import NavbarSmall from "../../responsiveComponents/small/NavbarSmall";
+import Footer from "../shared/Footer";
 import Navbar from "../shared/Navbar";
 import ScrollToTop from "../shared/ScrollToTop";
 import About from "./About";
@@ -17,11 +19,13 @@ const HomeIndex = () => {
   return (
     <div className="app">
       <Navbar></Navbar>
+      <NavbarSmall></NavbarSmall>
       <Intro></Intro>
       <About></About>
       <Projects></Projects>
       <Contact></Contact>
       <ScrollToTop></ScrollToTop>
+      <Footer></Footer>
     </div>
   );
 };

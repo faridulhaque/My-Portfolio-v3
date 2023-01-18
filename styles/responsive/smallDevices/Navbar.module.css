@@ -1,0 +1,26 @@
+.navbar{
+    display: none;
+}
+
+@media only screen and (max-width: 570px) {
+
+    .navbar {
+        width: 100%;
+        height: 80px;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        display: block;
+    }
+
+    .navbar div:first-of-type,
+    .navbar div:last-of-type {
+        width: 40%;
+        height: 100%;
+
+    }
+
+    .icon {
+        font-size: 18px;
+    }
+}

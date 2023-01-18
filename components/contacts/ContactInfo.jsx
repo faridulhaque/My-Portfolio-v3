@@ -7,8 +7,8 @@ import { FaFacebook } from "react-icons/fa";
 
 const ContactInfo = () => {
   return (
-    <div className="w-4/12 h-full bg-white">
-      <h2 className="text-4xl mt-5 text-basic">Any Query?</h2>
+    <div className="w-4/12 mt-5">
+      <h2 className="text-4xl text-basic">Any Query?</h2>
       <p className="text-[16px] text-basic mt-5 text-justify mr-5">
         If you have any questions feel free to
         contact me via email, phone, Whatsapp, Telegram, Linked In or Facebook.
@@ -26,7 +26,7 @@ const ContactInfo = () => {
         </span>
         <span className="ml-3">+880 1996 438234</span>
       </p>
-      <p className="text-basic flex items-center my-5 justify-between w-full">
+      <p className="text-basic flex items-center mt-10 justify-between w-full">
         <Link
           href="https://t.me/faridmurshed9"
           className="bg-[#0088cc] p-4 rounded-full shadow-xl"

@@ -10,7 +10,7 @@ const Navbar = () => {
 
 
   return (
-    <nav className={`w-full h-20 flex m-auto shadow-xl bg-[#97dece80] ${styles.navbar}`}>
+    <nav className={`w-full h-20 flex m-auto shadow-xl bg-[#B1E6DA] ${styles.navbar} sticky top-0 z-10`}>
       <div className="h-full xl:w-10/12 desktop:w-11/12 laptop:w-11/12 flex align-center m-auto cursor-pointer">
         <div
           onClick={() => router.push("/")}

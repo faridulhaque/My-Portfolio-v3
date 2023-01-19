@@ -17,7 +17,7 @@ const ContactForm = () => {
           onSubmit={handleSubmit}
           className="h-full desktop:w-7/12 laptop:full mobile:w-full tablet:w-full flex flex-col items-center mt-10"
         >
-          <div className="w-11/12 h-[80px] mt-5 grid grid-cols-2 gap-5">
+          <div className="w-11/12 desktop:h-[80px] laptop:h-[80px]] xl:h-[80px] tablet:h-[80px] mobile:h-auto xs:h-auto mt-5 grid xl:grid-cols-2 desktop:grid-cols-2 laptop:grid-cols-2 tablet:grid-cols-2 mobile:grid-cols-1 xs:grid-cols-1 gap-5">
             <div className="w-full flex flex-col items-start">
               <span className="mb-1 text-basic text-[16px]">Name</span>
               <input

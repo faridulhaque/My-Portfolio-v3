@@ -10,10 +10,16 @@ import Link from "next/link";
 const Intro = () => {
   return (
     <>
-      <div className="grid grid-cols-2 gap-4 mt-20 w-10/12 m-auto">
-        <div className="w-full h-[60vh] flex items-center">
+      <div
+        className="grid desktop:grid-cols-2  laptop:grid-cols-2 tablet:grid-cols-1 mobile:grid-cols-1 
+      desktop:gap-4 laptop:gap-3 tablet:gap-2 mobile:gap-1
+      desktop:mt-20 laptop:mt-10 tablet:mt-5 mobile:mt-0 w-10/12 m-auto"
+      >
+        <div className="w-full desktop:h-[60vh] laptop:h-[40vh] mobile:h-auto tablet:h-auto  flex items-center">
           <div className="h-3/4 w-full mt-10">
-            <h3 className="text-3xl text-basic mt-10 mb-2">Hello! I am a</h3>
+            <h3 className="text-3xl text-basic desktop:mt-10 laptop:mt-10 tablet:mt-5 mobile:mt-2 mb-2">
+              Hello! I am a
+            </h3>
 
             <h2 className="text-4xl text-primary font-bold uppercase">
               <Typewriter
@@ -26,11 +32,16 @@ const Intro = () => {
               />
             </h2>
 
-            <p className="text-basic mt-5 text-[16px] w-3/4">
+            <p className="text-basic desktop:mt-5 laptop:mt-3 tablet:mt-2 mobile:mt-2 text-[16px] desktop:w-3/4 laptop:3/4 tablet:w-full mobile:w-full">
               Hi! I am Faridul Haque! I am a self-motivated web developer with
               good knowledge of HTML, CSS, JavaScript and React JS.
             </p>
-            <p className="w-3/4 h-[75px] mt-10 flex items-center justify-between">
+            <div className='xs:flex mobile:flex tablet:flex desktop:hidden laptop:hidden xl:hidden items-center justify-center w-full h-auto mt-5'>
+                        <a className="btn w-full bg-primary text-white py-2 px-3 flex items-center justify-center rounded shadow-md hover:shadow-xl cursor-pointer">
+                            Download Resume
+                        </a>
+                    </div>
+            <p className="desktop:w-3/4 laptop:w-11/12 mobile:w-full tablet:w-full xs:w-full h-[75px] mt-10 flex items-center justify-between">
               <Link
                 className="bg-[#24292F] p-3  rounded-full shadow-xl"
                 href="https://github.com/faridulhaque"
@@ -66,10 +77,10 @@ const Intro = () => {
           </div>
         </div>
 
-        <div className="w-full ">
-          <div className="h-[60vh] flex items-center justify-center w-full relative">
+        <div className="w-full tablet:mt-20 mobile:mt-10 xs:mt-20">
+          <div className="desktop:h-[60vh] laptop:[40vh] mobile:h-auto tablet:h-auto flex items-center justify-center w-full relative">
             <Image
-              className="shadow-xl rounded-lg"
+              className="shadow-xl rounded-lg laptop:mt-5"
               src={intro}
               alt="man_vector"
               // width={500}
@@ -78,6 +89,7 @@ const Intro = () => {
           </div>
         </div>
       </div>
+      
     </>
   );
 };

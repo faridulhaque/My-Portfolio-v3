@@ -16,13 +16,23 @@ module.exports = {
       red: "red",
       white: "white"
     },
-    screens: {
-      sm: '480px',
-      md: '768px',
-      lg: '976px',
-      xl: '1440px',
-    },
+
     extend: {},
+    screens: {
+      'xs': '0px',
+      'mobile': '384px',
+      'tablet': '600px',
+      // => @media (min-width: 640px) { ... }
+
+      'laptop': '768px',
+      // => @media (min-width: 1024px) { ... }
+
+      'desktop': '992px',
+      // => @media (min-width: 1280px) { ... }
+      'xl': '1280px',
+
+    },
+
   },
   plugins: [],
 }

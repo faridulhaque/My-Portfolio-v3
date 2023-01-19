@@ -7,12 +7,12 @@ import { FaFacebook } from "react-icons/fa";
 
 const ContactInfo = () => {
   return (
-    <div className="w-4/12 mt-5">
-      <h2 className="text-4xl text-basic">Any Query?</h2>
+    <div className="desktop:w-4/12 laptop:w-10/12 mobile:w-11/12 tablet:w-11/12 desktop:mt-5 laptop:mt-5 mobile:mx-auto tablet:mx-auto mobile:pt-5 tablet:pt-5">
+      <h2 className="text-4xl text-basic xs:hidden mobile:hidden laptop:block desktop:block laptop:text-center">Any Query?</h2>
       <p className="text-[16px] text-basic mt-5 text-justify mr-5">
-        If you have any questions feel free to
-        contact me via email, phone, Whatsapp, Telegram, Linked In or Facebook.
-        Also, you can send me a message directly using the form on the right.
+        If you have any questions feel free to contact me via email, phone,
+        Whatsapp, Telegram, Linked In or Facebook. Also, you can send me a
+        message directly using the form on the right.
       </p>
       <p className="text-basic flex items-center my-3">
         <span className="bg-primary p-2 rounded-full">

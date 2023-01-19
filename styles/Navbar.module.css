@@ -1,0 +1,127 @@
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .navbar {
+        display: none;
+    }
+
+    .navbarSmall {
+        display: block;
+    }
+
+    .navbarSmall>div {
+        position: relative;
+    }
+
+    .menu {
+        width: 40%;
+        
+        height: 200px;
+        background-color: rgb(103, 190, 202);
+        top: 80px;
+        display: flex;
+        transition: all 0.5s ease;
+        height: 100vh;
+
+    }
+
+    .menu ul li{
+        margin-left: 25px;
+        margin-top: 10px;
+        padding: 10px 5px;
+        color: #323232;
+    }
+
+    .menuFalse {
+        position: absolute;
+        left: -40%;
+        z-index: 100;
+    }
+    .menuTrue {
+        position: absolute;
+        left: 0%;
+        z-index: 100;
+
+    }
+
+
+
+
+
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .navbar {
+        display: none;
+    }
+
+    .navbarSmall {
+        display: block;
+    }
+
+    .navbarSmall>div {
+        position: relative;
+    }
+
+    .menu {
+        width: 40%;
+        
+        height: 200px;
+        background-color: rgb(103, 190, 202);
+        top: 80px;
+        display: flex;
+        transition: all 0.5s ease;
+        height: 100vh;
+
+    }
+
+    .menu ul li{
+        margin-left: 25px;
+        margin-top: 10px;
+        padding: 10px 5px;
+        color: #323232;
+    }
+
+    .menuFalse {
+        position: absolute;
+        left: -40%;
+    }
+    .menuTrue {
+        position: absolute;
+        left: 0%;
+
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .navbar {
+        display: block;
+    }
+
+    .navbarSmall {
+        display: none;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .navbar {
+        display: block;
+    }
+
+    .navbarSmall {
+        display: none;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .navbar {
+        display: block;
+    }
+
+    .navbarSmall {
+        display: none;
+    }
+}

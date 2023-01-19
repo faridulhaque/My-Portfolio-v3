@@ -3,14 +3,15 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import React from "react";
 import logo from "../../assets/images/t_logo.png";
+import styles from "../../styles/Navbar.module.css"
 
 const Navbar = () => {
   const router = useRouter();
 
 
   return (
-    <nav className="w-full h-20 flex m-auto shadow-xl bg-[#97dece80] lg:block md:block xl:block sm:hidden">
-      <div className="h-full w-10/12 flex align-center m-auto cursor-pointer">
+    <nav className={`w-full h-20 flex m-auto shadow-xl bg-[#97dece80] ${styles.navbar}`}>
+      <div className="h-full xl:w-10/12 desktop:w-11/12 laptop:w-11/12 flex align-center m-auto cursor-pointer">
         <div
           onClick={() => router.push("/")}
           className="flex h-full w-2/12 items-center justify-start"
@@ -26,7 +27,7 @@ const Navbar = () => {
           </span>
         </div>
 
-        <div className="flex h-full w-8/12 ">
+        <div className="flex h-full desktop:w-8/12 xl:w-9/12 laptop:w-6/12">
           <ul className="w-full h-full flex items-center justify-evenly text-basic">
             <li
               className="text-basic hover:text-primary"
@@ -66,8 +67,8 @@ const Navbar = () => {
           </ul>
         </div>
 
-        <div className="flex h-full w-2/12 items-center justify-end">
-          <a className="btn bg-primary text-white py-2 px-3 flex items-center justify-center rounded shadow-md hover:shadow-xl cursor-pointer">
+        <div className="flex h-full desktop:w-4/12 xl:w-3/12 laptop:w-4/12 items-center justify-end">
+          <a className="w-full btn bg-primary text-white py-2 xl:px-3 desktop:px-2 flex items-center justify-center rounded shadow-md hover:shadow-xl cursor-pointer">
             Download Resume
           </a>
         </div>

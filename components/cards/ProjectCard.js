@@ -51,7 +51,7 @@ const ProjectCard = ({ project }) => {
 
                 <div className="w-full h-1/4 relative">
                     <h1 className="text-basic text-3xl mt-5 ml-4">{project?.name}</h1>
-                    <span onClick={handleModal} className="absolute top-[10%] right-5 cursor-pointer">
+                    <span onClick={handleModal} className="absolute xl:top-[10%] desktop:top-[10%] laptop:top-[7%] tablet:top-[7%] mobile:top-[5%] xs:top-[5%] right-5 cursor-pointer">
                         <TooltipContainer dataTip="See More" icon={<MdUnfoldMore className='text-basic text-[24px]'></MdUnfoldMore>} cn="bg-white"></TooltipContainer>
                     </span>
                 </div>

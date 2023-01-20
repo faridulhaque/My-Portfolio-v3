@@ -8,7 +8,8 @@ const About = () => {
       <h2 className="text-center text-4xl text-basic desktop:my-20 laptop:my-5 tablet:my-5 mobile:my-5 xs:my-5">About Me</h2>
       <div className="w-full desktop:h-[550px] laptop:h-[450px] tablet:h-auto mobile:h-auto flex justify-center ">
         <div className="desktop:w-10/12 laptop:w-full h-full desktop:flex laptop:flex tablet:block mobile:block items-center">
-          <div className="w-2/4 h-full desktop:block laptop:hidden tablet:hidden mobile:hidden xs:hidden">
+          
+          <div className="w-2/4 h-full desktop:block laptop:hidden tablet:hidden mobile:hidden xs:hidden flex items-center">
             <Image
               src={aboutMe}
               alt="man-computer"
@@ -16,7 +17,7 @@ const About = () => {
             ></Image>
           </div>
 
-          <div className="desktop:w-2/4 laptop:w-full tablet:w-full mobile:w-full h-full flex items-center justify-center">
+          <div className="desktop:w-2/4 laptop:w-full tablet:w-full mobile:w-full laptop:h-full flex items-center justify-center">
             <div className="desktop:h-3/4 laptop:h-auto tablet:h-full mobile:h-full desktop:w-10/12 laptop:w-10/12 tablet:w-full mobile:w-11/12 xs:w-11/12">
               
               <p className="text-[18px] text-justify text-basic">

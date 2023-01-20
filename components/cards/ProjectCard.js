@@ -43,7 +43,7 @@ const ProjectCard = ({ project }) => {
     return (
 
         <>
-            <div className="w-full h-[500px] bg-[#ECECEC] shadow-xl transition-all duration-700 hover:shadow-2xl rounded-xxl hover:scale-105">
+            <div className="w-full desktop:h-[500px] laptop:h-[500px] xl:h-[500px] tablet:h-[500px] mobile:h-[400px] xs:h-[350px] bg-[#ECECEC] shadow-xl transition-all duration-700 hover:shadow-2xl rounded-xxl hover:scale-105">
                 <div className="w-full h-3/4 relative">
                     <Image className='w-full h-full' src={project?.image} alt="screen-shot" width={550} height={500}></Image>
 

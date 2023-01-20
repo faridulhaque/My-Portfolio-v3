@@ -77,8 +77,8 @@ const Intro = () => {
           </div>
         </div>
 
-        <div className="w-full tablet:mt-20 mobile:mt-10 xs:mt-20">
-          <div className="desktop:h-[60vh] laptop:[40vh] mobile:h-auto tablet:h-auto flex items-center justify-center w-full relative">
+        <div className="w-full xl:mt-0 desktop:mt-0 tablet:mt-20 mobile:mt-10 xs:mt-20">
+          <div className="xl:h-[60vh] desktop:h-[60vh] laptop:[40vh] mobile:h-auto tablet:h-auto flex items-center justify-center w-full relative">
             <Image
               className="shadow-xl rounded-lg laptop:mt-5"
               src={intro}

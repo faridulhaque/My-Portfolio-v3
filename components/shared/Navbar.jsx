@@ -68,7 +68,7 @@ const Navbar = () => {
         </div>
 
         <div className="flex h-full desktop:w-4/12 xl:w-3/12 laptop:w-4/12 items-center justify-end">
-          <a className="w-full btn bg-primary text-white py-2 xl:px-3 desktop:px-2 flex items-center justify-center rounded shadow-md hover:shadow-xl cursor-pointer">
+          <a download href="faridMurshed.pdf" className="w-full btn bg-primary text-white py-2 xl:px-3 desktop:px-2 flex items-center justify-center rounded shadow-md hover:shadow-xl cursor-pointer">
             Download Resume
           </a>
         </div>

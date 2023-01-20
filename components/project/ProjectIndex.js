@@ -65,7 +65,6 @@ const ProjectIndex = () => {
     const features = project?.features;
 
 
-    console.log(features)
 
 
     return (

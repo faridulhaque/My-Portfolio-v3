@@ -16,7 +16,7 @@ const height = id == 1 ||  id == 2 ? 'h-[350px]' : id == 4 ? 'h-[300px]' : 'h-[2
         <div className="w-full h-full relative">
           <div
             ref={modalRef}
-            className={`desktop:w-2/4 desktop:h-[400px] xl:w-2/4 xl:h-[400px] laptop:w-3/4 laptop:h-[400px] tablet:w-3/4 tablet:h-[375px] mobile:w-11/12 mobile:h-3/5 xs:w-11/12 xs:h-3/5 bg-white absolute top-0 bottom-0 left-0 right-0 m-auto modal-motion`}
+            className={`desktop:w-2/4 desktop:h-[400px] xl:w-2/4 xl:h-[400px] laptop:w-3/4 laptop:h-[400px] tablet:w-3/4 tablet:h-auto mobile:w-11/12 mobile:h-auto xs:w-11/12 xs:h-auto bg-white absolute top-0 bottom-0 left-0 right-0 m-auto modal-motion`}
           >
             <div className="w-full h-auto ">
               <h2 className="text-basic mt-5 ml-5 text-4xl">{name}</h2>
